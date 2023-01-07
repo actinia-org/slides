@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <title>actinia</title>
+    <link rel="shortcut icon" href="resources/img/logos/actinia-icon.svg" type="image/x-icon">
+    <link href="css/impress-common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="resources/extras/highlight/styles/github.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Brave</b>, <b>Firefox</b> or <b>Chromium</b> browser.</p>
+</div>
+
+<div id="impress">
+
+<!-- WELCOME ###########################################################################-->
+<div id="welcome" class="step slide bg" data-x="0" data-y="0" data-scale="50">
+<h1>GRASS GIS in the cloud: actinia geoprocessing</h1>
+<h3><img src="resources/img/desk_complete.svg" alt="Office Desk" id="welcome-desk"/></h3>
+</div>
+
+<!-- MUNDIALIS ###########################################################################-->
+<div id="mundialis" class="step slide bg" data-x="-25000" data-y="0" data-scale="4"">
+<table id="ma">
+<tr>
+<td><div class="table-img"><img src="resources/img/MA/IMG_6750_4.jpg"></div></td>
+<td><div class="table-img"><img src="resources/img/MA/JoHempel_202010_Mundialis_Loki.jpg"></div></td>
+<td><div class="table-img"><img src="resources/img/MA/JoHempel_201709_Mundialis_MN.jpg"></div></td>
+<td><div class="table-img"><img src="resources/img/MA/JoHempel_201709_Mundialis_HP.jpg"></div></td>
+</tr>
+<tr>
+<td><div class="table-img"><img src="resources/img/MA/JoHempel_201709_Mundialis_CT.jpg"></div></td>
+<td><div class="table-img"><img src="resources/img/MA/JoHempel_201803_Mundialis_AW.jpg"></div></td>
+<td><div class="table-img"><img src="resources/img/MA/JULI0220_JH_Zuschnitt_kl.jpg"></td>
+<td><div class="table-img"><img src="resources/img/MA/FotoTreppeLina_cut-1.jpg"></div></td>
+</tr>
+<tr>
+<td><div class="table-img"><img src="resources/img/MA/JULI0187_MMA_Zuschnitt_kl.jpg"></div></td>
+<td><div class="table-img"><img src="resources/img/MA/JoHempel_202010_Mundialis_GR.jpg"></div></td>
+<td><div class="table-img"><img src="resources/img/MA/JoHempel_201803_Mundialis_MM.jpg"></div></td>
+<td><div class="table-img"><img src="resources/img/MA/JoHempel_201709_Mundialis_JO.jpg"></div></td>
+</tr>
+</table>
+<!-- <h1>mundialis GmbH & Co. KG</h1> -->
+</div>
+
+<div id="idea" class="step slide idea bg overview" data-x="20000" data-y="-2000" data-scale="11">
+<!-- <img src="resources/img/icons/light-bulb.svg"/> -->
+</div>
+
+<div id="idea1" class="step slide idea bg" data-x="20000" data-y="-5400" data-scale="11">
+<img src="resources/img/icons/idea1.svg"/>
+<p>"bring algorithm to the data"</p>
+</div>
+
+<div id="idea2" class="step slide idea bg" data-x="20050" data-y="-5400" data-scale="11">
+<img src="resources/img/icons/idea2.svg"/>
+<p>exploit GRASS GIS</br>functionality via</br>HTTP REST API</p>
+</div>
+
+<div id="idea3" class="step slide idea bg" data-x="20000" data-y="-5400" data-scale="11">
+<img src="resources/img/icons/idea3.svg"/>
+<p>GRaaS</br>GRASS as a Service</p>
+</div>
+
+<div id="idea4" class="step slide idea bg" data-x="20000" data-y="-5400" data-scale="11">
+<img src="resources/img/icons/cloud.svg"/>
+<img id="grass" src="resources/img/logos/GRASS_GIS.svg"/>
+</div>
+
+<div id="chalk_board" class="step slide chalk bg" data-x="20000" data-y="-5400" data-scale="11">
+<img src="resources/img/1_grass.svg"/>
+</div>
+
+<div id="chalk_board2" class="step slide chalk bg" data-x="20000" data-y="-5400" data-scale="11">
+<img src="resources/img/2_grass.svg"/>
+</div>
+
+<div id="chalk_board3" class="step slide chalk bg" data-x="20000" data-y="-5400" data-scale="11">
+<img src="resources/img/3_grass.svg"/>
+</div>
+
+<!--#########################################################################-->
+
+<div id="monitor" class="step slide monitor" data-x="-1300" data-y="-6000" data-scale="16">
+  <img src="resources/img/icons/monitor.svg"/>
+</div>
+
+<div id="monitor2" class="step slide monitor" data-rel-x="0" data-rel-y="0" data-scale="16">
+<br><br>
+REST API on top
+<ul>
+    <li>List locations, mapsets, vector-, raster- and spatio-temporal data as resources</li>
+    <li>Enable usage of GRASS modules</li>
+    <li>User Management</br>
+        - Groups for mapset access</br>
+        - Roles e.g. for pixel limits, number of processes and calculation duration limits</li>
+    <li>Mapset locking to avoid conflicts</li>
+    <li>GRASS DB management</li>
+</ul>
+<img src="resources/img/logos/actinia-grass.svg"/>
+</div>
+
+<div id="monitor3" class="step slide monitor" data-rel-x="0" data-rel-y="0" data-scale="16">
+    <img src="resources/img/actinia-workshop.svg"/>
+</div>
+
+<div id="monitor4" class="step slide monitor" data-rel-x="0" data-rel-y="0" data-scale="16">
+    <img src="resources/img/5_pre_cloud.svg"/>
+</div>
+
+<div id="monitor5" class="step slide monitor" data-rel-x="0" data-rel-y="0" data-scale="16">
+    <img src="resources/img/5_pre2_cloud.svg"/>
+</div>
+
+<div id="monitor6" class="step slide monitor" data-rel-x="0" data-rel-y="0" data-scale="27">
+    <img src="resources/img/5_cloud.svg"/>
+</div>
+
+<div id="load_balancer" class="step slide" data-rel-x="0" data-rel-y="0" data-scale="27">
+    <img src="resources/img/6_cloud_abstract.svg"/>
+</div>
+
+<div id="laptop_balancer" class="step slide overview" data-rel-x="0" data-rel-y="10000" data-scale="45">
+</div>
+
+<!--#########################################################################-->
+
+<div id="laptop" class="step slide" data-rel-x="0" data-rel-y="12000" data-scale="9">
+  <img src="resources/img/icons/laptop.svg"/>
+</div>
+
+<div id="laptop1" class="step slide" data-rel-x="0" data-rel-y="0" data-scale="9">
+<div class="left">
+<b>GET /locations</b>
+<code>
+<pre>
+{
+  "locations": [
+    "latlong_wgs84",
+    "ECAD",
+    "nc_spm_08"
+  ],
+  "status": "success"
+}
+</pre>
+</code>
+</div>
+<div class="right">
+<b>GET /locations/nc_spm_08/mapsets</b>
+<code>
+<pre>
+...
+"process_log": [
+  {
+    "executable": "g.mapsets",
+    "id": "1",
+    "parameter": [
+      "separator=newline",
+      "-l"
+    ],
+    "return_code": 0,
+    "run_time": 0.10045695304870605,
+    "stderr": [
+      "Available mapsets:",
+      ""
+    ],
+    "stdout": "PERMANENT\nlandsat\nmodis_lst\n"
+  }
+],
+"process_results": [
+  "PERMANENT",
+  "landsat",
+  "modis_lst"
+],
+...
+</pre>
+</code>
+</div>
+</div>
+
+<div id="laptop2" class="step slide" data-rel-x="0" data-rel-y="0" data-scale="9">
+<div class="left">
+<b>
+GET /locations/nc_spm_08/mapsets/PERMANENT/raster_layers</b>
+<code>
+<pre>
+...
+"process_results": [
+  "aspect",
+  "basin_50K",
+  "boundary_county_500m",
+  "elev_lid792_1m",
+  "elev_ned_30m",
+  "elev_srtm_30m",
+  "elev_state_500m",
+  "elevation",
+  "elevation_shade",
+  "towns",
+  ...
+  "urban",
+  "zipcodes",
+  "zipcodes_dbl"
+],
+...
+</pre>
+</code>
+</div>
+<div class="right">
+<b>GET /locations/nc_spm_08/mapsets/PERMANENT/raster_layers/elevation/render</b>
+<img src="resources/img/elevation_crop.png"/>
+</div>
+</div>
+
+<div id="laptop3" class="step slide" data-rel-x="0" data-rel-y="0" data-scale="9">
+  <div class="left">
+  <b>User defined processing</b>
+<ul><li>ephemeral</li><li>persistent</li></ul>
+Create custom process chains by chaining the processing tools provided by actinia:
+<ul>
+  <li>GRASS modules</li>
+  <li>importer/exporter</li>
+  <li>python scripts</li>
+  <li>cmd (GDAL, PROJ, snappy)</li>
+  <li>...</li>
+</ul>
+</div>
+<div class="right">
+<code>
+<pre>
+POST /locations/nc_spm_08/processing_async_export
+POST /locations/nc_spm_08/mapsets/my_new_mapset/processing_async
+
+{
+    "list": [
+      {
+        "module": "r.slope.aspect",
+        "id": "r_slope_aspect_1",
+        "inputs": [
+          {
+            "param": "elevation",
+            "value": "elev_ned_30m@PERMANENT"
+          }
+        ],
+        "outputs": [
+          {
+            "export": {
+              "format": "GTiff",
+              "type": "raster"
+            },
+            "param": "slope",
+            "value": "elev_ned_30m_slope"
+          }
+        ],
+        "flags": "a"
+      }
+    ],
+    "version": "1"
+}
+</pre>
+</code>
+</div>
+</div>
+
+<div id="laptop4" class="step slide" data-rel-x="0" data-rel-y="0" data-scale="9">
+<div class="left">
+<code>
+<pre>
+1) --> curl -X POST -u myuser:mypassword -d @${PROCESS_CHAIN} \
+    -H 'Content-Type: application/json' \
+    https://actinia.mundialis.de/api/v3/locations/nc_spm_08/processing_async_export
+</pre>
+</code>
+<p class="right">JSON with status <-- 2)</p></br>
+<p>3) --> poll status</p></br>
+<p class="right">JSON with resource URLs <-- 4)</p></br>
+<p>5) --> GET resources from URLs</p>
+</div>
+<div class="right">
+<img src="resources/img/my_slope.png"/>
+<img src="resources/img/my_aspect.png"/>
+</div>
+</div>
+
+<div id="laptop5" class="step slide" data-rel-x="0" data-rel-y="0" data-scale="9">
+  <div class="left">
+  <b>"bring algorithm to the data"</b>
+<ul><li>via predefined functionalities</li><li>via Importer (/Exporter)</li></ul>
+e.g. Sentinel data (S-1 and S-2) processing with single band access
+<ul>
+  <li>Download from ESA API hub</li>
+  <li>from local storage (as provided by DIAS platforms)</li>
+  <li>Amazon AWS</li>
+  <li>Google Cloud Storages</li>
+  <li>...</li>
+</ul>
+</div>
+<div class="right">
+<code>
+<pre>
+curl -X POST -u myuser:mypassword -d @${PROCESS_CHAIN} \
+    -H 'Content-Type: application/json' \
+    https://actinia.mundialis.de/api/v3/sentinel2_process/ndvi/
+    S2B_MSIL1C_20190630T090559_N0207_R050_T35TMK_20190630T113444
+</pre>
+</code>
+<img src="resources/img/ndvi_preview.png"/>
+</div>
+</div>
+
+<div id="laptop_out" class="step slide overview" data-rel-x="0" data-rel-y="-10000" data-scale="45">
+</div>
+<!--#########################################################################-->
+
+<div id="monitor_again" class="step slide monitor markdown" data-x="-1300" data-y="-6000" data-scale="16">
+## More features
+- ace (actinia command execution via GRASS GIS)
+- advanced usage with GRASS addons
+- openEO support - openeo-grassgis-driver converts processing requests (process graphs)
+    into actinia jobs. The openEO core API (https://openeo.org; H2020 project) is
+    a standardized interface supporting multiple backends.
+- STAC support
+- Keycloak integration
+- Process chain templating
+- ...
+</div>
+
+<div id="monitor_again2" class="step slide monitor markdown" data-x="-1300" data-y="-6000" data-scale="16">
+## Outlook
+- enhanced STAC support
+- combined usage of tiling- and parallel plugin
+- automatisation of actinia worker startup
+- more sophisticated job queues and message queues in general
+- restructure in smaller pieces / microservices
+- OGC API processes ?
+- ...
+</div>
+
+<!-- ZOOM ###########################################################################-->
+
+<div class="step slide overview" data-x="0" data-y="0" data-scale="50">
+</div>
+
+<div id="community" class="step slide" data-x="-24000" data-y="-13000" data-scale="5">
+<div id="left">
+  <b>Join on github:</b><br><a href="https://github.com/actinia-org" target="_blank">https://github.com/actinia-org</a>
+</br>
+</br>
+  <b>Get started:</b><br><a href="https://actinia.mundialis.de" target="_blank">https://actinia.mundialis.de</a>
+</div>
+<div id="right">
+actinia became an OSGeo community project in 2019!
+</div>
+</div>
+
+<div class="step slide overview" data-x="0" data-y="0" data-scale="50">
+</div>
+
+<div id="the_end" class="step slide" data-x="0" data-y="-17000" data-scale="90">
+  <img src="resources/img/8_the_end.svg"/>
+  <h3>Thank You!</br>Questions?</h3>
+  <p>Presentation created with Inkscape and impress.js</br>
+  Icons designed by Freepik, Smashicons and surang from Flaticon</p>
+</div>
+
+<!-- THE END #######################################################################-->
+
+</div>
+
+<div id="impress-toolbar"></div>
+<div id="impress-help"></div>
+
+<script type="text/javascript" src="resources/extras/highlight/highlight.pack.js"></script>
+<script type="text/javascript" src="resources/extras/mermaid/mermaid.min.js"></script>
+<script type="text/javascript" src="resources/extras/markdown/markdown.js"></script>
+<script type="text/javascript" src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>

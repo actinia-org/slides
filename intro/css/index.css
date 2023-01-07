@@ -1,0 +1,496 @@
+/***** Fonts *****/
+@font-face {
+    font-family: 'Chilanka';
+    src: url('../resources/fonts/Chilanka-Regular.woff2') format('woff2'), url('../resources/fonts/Chilanka-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/***** Fallback message *****/
+
+.fallback-message {
+    font-family: sans-serif;
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+    border: 1px solid #E4C652;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+
+/***** Defaults *****/
+
+body {
+    font-family: 'Chilanka', serif;
+    min-height: 950px;
+    /* background: #fff; */
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h1,
+h2,
+h3 {
+    color: #403c33;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    text-align: center;
+    line-height: 1em;
+    font-weight: normal;
+}
+
+h2,
+p,
+li,
+table {
+    font-family: 'Chilanka', 'Open Sans', sans-serif;
+}
+
+h4 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 0.7em;
+    text-align: justify;
+}
+
+li {
+    /* margin: 0.2em; */
+    margin: 1.2em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0;
+}
+
+a:hover,
+a:focus {
+    color: rgb(103, 103, 103);
+}
+
+pre {
+    font-size: x-large;
+}
+
+code {
+    background-color: #f4f3efa6!important;
+}
+
+hr {
+    border-width: 2px;
+    border-style: solid;
+}
+
+/***** General Presentation *****/
+
+.step {
+    position: relative;
+    box-sizing: border-box;
+    width: 1500px;
+    height: 950px;
+    padding: 40px 60px;
+    margin: 20px auto;
+    color: rgb(90, 90, 90);
+    font-size: 30px;
+    line-height: 1.3;
+    /* border: solid red 1px; */
+}
+
+img {
+    width: 90%;
+    float: left;
+    margin-left: 40px;
+    margin-top: 0px;
+}
+
+
+/***** Welcome Slide *****/
+
+/***** mundialis Slide *****/
+
+table.ma {
+    padding-top:3em;
+    margin-top:3em;
+}
+
+.table-img {
+    width: 320px;
+    height: 229px;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #d2d4d9;
+}
+
+.table-img img {
+    max-height: 320px;
+    max-width: none;
+    min-width: 100%;
+    min-height: 229px;
+}
+
+img {
+    width: 90%;
+    float: left;
+    margin-left: 40px;
+    margin-top: 0px;
+}
+/***** idea Slides *****/
+
+.overview.future.step:not(.active),
+.overview.past.step:not(.active) {
+    display: none;
+}
+
+#idea.future.step:not(.active),
+#idea1.future.step:not(.active),
+#idea2.future.step:not(.active),
+#idea3.future.step:not(.active),
+#idea4.future.step:not(.active) {
+    display: none;
+}
+
+#idea img {
+    width: 10%;
+    position: relative;
+    bottom: -21em;
+    left: 2em;
+}
+#idea1 img{
+    width: 21%;
+    position: relative;
+    bottom: -13.8em;
+    left: 7em;
+}
+#idea2 img {
+    width: 18%;
+    position: relative;
+    bottom: -7.7em;
+    left: 1.3em;
+}
+#idea3 img {
+    width: 16%;
+    position: relative;
+    bottom: -6.2em;
+    left: 9em;
+}
+#idea4 img {
+    width: 35%;
+    position: relative;
+    bottom: 0em;
+    right: -24em;
+}
+#idea4 img#grass {
+    width: 11%;
+    position: relative;
+    bottom: -1em;
+    right: -12em;
+}
+#idea1 p{
+    position: relative;
+    bottom: -21.6em;
+    left: -3em;
+}
+#idea2 p {
+    position: relative;
+    bottom: -14.4em;
+    left: -7.6em;
+}
+#idea3 p {
+    position: relative;
+    bottom: -11.1em;
+    left: 3.2em;
+}
+
+/***** chalk board Slides *****/
+.impress-on-chalk_board #welcome-desk,
+.impress-on-chalk_board2 #welcome-desk,
+.impress-on-chalk_board3 #welcome-desk {
+    opacity: 0.3;
+}
+#chalk_board.future.step:not(.active),
+#chalk_board2.future.step:not(.active),
+#chalk_board3.future.step:not(.active) {
+    display: none;
+}
+#chalk_board.past.step:not(.active),
+#chalk_board2.past.step:not(.active),
+#chalk_board3.past.step:not(.active) {
+    display: none;
+}
+
+#chalk_board img,
+#chalk_board2 img,
+#chalk_board3 img {
+    width: 100%;
+    position: relative;
+    bottom: 8em;
+    left: -1em;
+}
+
+/***** monitor Slides *****/
+.impress-on-monitor6 .bg,
+.impress-on-load_balancer .bg {
+    display: none;
+}
+
+#monitor.future.step:not(.active),
+#monitor2.future.step:not(.active),
+#monitor3.future.step:not(.active),
+#monitor4.future.step:not(.active),
+#monitor5.future.step:not(.active),
+#monitor6.future.step:not(.active),
+#load_balancer.future.step:not(.active) {
+    display: none;
+}
+#monitor2.past.step:not(.active),
+#monitor3.past.step:not(.active),
+#monitor4.past.step:not(.active),
+#monitor5.past.step:not(.active),
+#monitor6.past.step:not(.active),
+#load_balancer.past.step:not(.active) {
+    display: none;
+}
+
+#monitor2 {
+    padding-left: 5em;
+}
+#monitor2 ul {
+    width: 50%;
+}
+#monitor img {
+    position: relative;
+    width: 142%;
+    left: -12.2em;
+    bottom: 5.1em;
+}
+#monitor2 img {
+    position: relative;
+    width: 23%;
+    left: 25em;
+    bottom: 18em;
+}
+#monitor3 {
+    padding-left: 8em;
+    padding-top: 3em;
+}
+#monitor3 img{
+    width: 100%;
+    background: white;
+    position: relative;
+    left: -7em;
+}
+
+#monitor4 img {
+    position: relative;
+    width: 142%;
+    left: -12.2em;
+    bottom: 5.1em;
+}
+
+#monitor5 img {
+    position: relative;
+    left: -6.26em;
+    width: 114%;
+    bottom: 2.05em;
+}
+
+#monitor6 img {
+    position: relative;
+    left: 0em;
+    /* width: 146%; */
+    bottom: 0em;
+}
+
+#load_balancer img {
+    width: 100%;
+}
+/***** laptop Slides *****/
+#laptop.future.step:not(.active),
+#laptop1.future.step:not(.active),
+#laptop2.future.step:not(.active),
+#laptop3.future.step:not(.active),
+#laptop4.future.step:not(.active),
+#laptop5.future.step:not(.active) {
+    display: none;
+}
+#laptop.past.step:not(.active),
+#laptop1.past.step:not(.active),
+#laptop2.past.step:not(.active),
+#laptop3.past.step:not(.active),
+#laptop4.past.step:not(.active),
+#laptop5.past.step:not(.active) {
+    display: none;
+}
+
+.impress-on-laptop_balancer .bg,
+.impress-on-load_balancer #monitor,
+.impress-on-laptop_balancer #monitor,
+.impress-on-laptop #monitor,
+.impress-on-laptop .bg,
+.impress-on-laptop1 .bg,
+.impress-on-laptop2 .bg,
+.impress-on-laptop3 .bg,
+.impress-on-laptop4 .bg,
+.impress-on-laptop5 .bg,
+.impress-on-laptop_out .bg,
+.impress-on-laptop_out #load_balancer {
+    display: none;
+}
+.impress-on-laptop_balancer #laptop,
+.impress-on-laptop1 #laptop,
+.impress-on-laptop2 #laptop,
+.impress-on-laptop3 #laptop,
+.impress-on-laptop4 #laptop,
+.impress-on-laptop5 #laptop,
+.impress-on-laptop_out #laptop {
+    display: block !important;
+}
+
+.impress-on-laptop_balancer #load_balancer,
+.impress-on-laptop #load_balancer {
+    display: block !important;
+}
+.impress-on-laptop_out #monitor {
+    display: block !important;
+}
+
+#laptop img {
+    width: 170%;
+    position: relative;
+    left: -18em;
+    top: -15em;
+}
+
+#laptop_out img {
+    position: relative;
+    left: -6.3em;
+    width: 114%;
+    bottom: 2em;
+}
+
+#laptop1 div,
+#laptop2 div,
+#laptop3 div,
+#laptop4 div,
+#laptop5 div {
+    float: left;
+    margin: 2em;
+    margin-right: 5em;
+}
+#laptop2 img {
+    position: relative;
+    bottom: 21em;
+    width: 50%;
+    left: 20em;
+}
+#laptop3 div {
+    width: 40%;
+    margin-right: -2em;
+}
+#laptop4 img {
+    position: relative;
+    bottom: 4em;
+    width: 39%;
+    left: 7em;
+    float: left;
+}
+#laptop4 p {
+    float: left;
+}
+#laptop4 p.right {
+    float: right;
+}
+#laptop5 div {
+    width: 40%;
+    margin-right: -2em;
+}
+#laptop5 img {
+    width: 118%;
+    margin: 1em;
+}
+/***** monitor again Slides *****/
+
+#monitor_again.future.step:not(.active),
+#monitor_again2.future.step:not(.active) {
+    display: none;
+}
+#monitor_again.past.step:not(.active),
+#monitor_again2.past.step:not(.active) {
+    display: none;
+}
+.impress-on-monitor_again .bg {
+    display: none;
+}
+
+.impress-on-monitor_again #monitor,
+.impress-on-monitor_again2 #monitor {
+    display: block !important;
+}
+
+/***** community Slides *****/
+#community.future.step:not(.active) {
+    display: none;
+}
+#community.past.step:not(.active) {
+    display: none;
+}
+#community #left {
+    position: relative;
+    width: 14em;
+    background: white;
+    top: 14em;
+    left: 5.7em;
+    rotate: 9deg;
+    text-align: center;
+    padding: 0.5em;
+}
+#community #right {
+    position: relative;
+    width: 7em;
+    background: white;
+    top: 4em;
+    left: 13em;
+    rotate: -11deg;
+    font-size: 2em;
+    padding: 0.5em;
+    text-align: center;
+}
+
+/***** the-end Slides *****/
+#the_end.future.step:not(.active) {
+    display: none
+}
+#the_end.past.step:not(.active) {
+    display: none;
+}
+
+.impress-on-the_end #laptop_balancer,
+.impress-on-the_end #welcome h1 {
+    display: none;
+}
+
+#the_end img {
+    width: 70%;
+    float: none;
+    margin-left: 6em;
+}
+#the_end h3 {
+    margin-top: 2em;
+}
+#the_end p {
+    text-align: center;
+    position: relative;
+    bottom: -22em;
+    font-size: small;
+}
